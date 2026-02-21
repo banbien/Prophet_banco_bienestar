@@ -18,7 +18,7 @@ torch==1.13.1
 pytorch-lightning==1.9.5
 
 # NeuralProphet
-neuralprophet==0.6.2
+neuralprophet==0.9.0
 
 # Fechas y festivos (compatibles)
 holidays==0.21.13
