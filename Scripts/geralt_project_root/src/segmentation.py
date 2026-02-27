@@ -205,6 +205,7 @@ solicitud = {
     "event_driven": 20,
     "normal_con_picos": 15,
     "grande_y_estable": 5
+    
 }
 
 listas_atm, tabla_resumen = seleccionar_cajeros_multi_cluster(
@@ -214,12 +215,8 @@ listas_atm, tabla_resumen = seleccionar_cajeros_multi_cluster(
 )
 
 
-
-
-
 #diccionario que contiene todos los elementos solicitados
 #listas_atm
-
 
 
 # print(listas_atm.get('normal_estable'))

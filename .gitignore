@@ -1,0 +1,8 @@
+# Ignorar todos los archivos con extensión .np
+*.np
+
+# Ignorar específicamente los archivos .np en la carpeta models
+Scripts/geralt_project_root/models/*.np
+
+#archivo pesado
+.parquet 
