@@ -1,0 +1,1950 @@
+ar_layers: &id001 []
+compute_components_flag: false
+config_ar: !!python/object:neuralprophet.configure.AR
+  ar_layers: *id001
+  ar_reg: 0.1
+  n_lags: 30
+  reg_lambda: 1.0e-05
+config_events: !!python/object/apply:collections.OrderedDict
+- - - adultos_mayores
+    - !!python/object:neuralprophet.configure.Event
+      lower_window: 0
+      mode: additive
+      reg_lambda: 0.1
+      upper_window: 3
+  - - discapacidad
+    - !!python/object:neuralprophet.configure.Event
+      lower_window: 0
+      mode: additive
+      reg_lambda: 0.1
+      upper_window: 3
+  - - madres_trabajadoras
+    - !!python/object:neuralprophet.configure.Event
+      lower_window: 0
+      mode: additive
+      reg_lambda: 0.1
+      upper_window: 3
+config_holidays: null
+config_lagged_regressors: null
+config_normalization: !!python/object:neuralprophet.configure.Normalization
+  global_data_params: !!python/object/apply:collections.OrderedDict
+  - - - ds
+      - !!python/object:neuralprophet.df_utils.ShiftScale
+        scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+        - 39398400000000000
+        - 10
+        shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+        - 1719792000000000000
+        - null
+        - null
+        - 10
+    - - y
+      - !!python/object:neuralprophet.df_utils.ShiftScale
+        scale: !!python/object/apply:numpy.core.multiarray.scalar
+        - &id002 !!python/object/apply:numpy.dtype
+          args:
+          - f8
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - -1
+          - -1
+          - 0
+        - !!binary |
+          HI4GPMmMD0E=
+        shift: !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          I4OdpBf+DEE=
+    - - adultos_mayores
+      - !!python/object:neuralprophet.df_utils.ShiftScale
+        scale: 1.0
+        shift: 0.0
+    - - discapacidad
+      - !!python/object:neuralprophet.df_utils.ShiftScale
+        scale: 1.0
+        shift: 0.0
+    - - madres_trabajadoras
+      - !!python/object:neuralprophet.df_utils.ShiftScale
+        scale: 1.0
+        shift: 0.0
+  global_normalization: false
+  global_time_normalization: true
+  local_data_params: !!python/object/apply:collections.OrderedDict
+  - - - JF000021
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                OaOFwMShE0E=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                UGkkR0kXF0E=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000287
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                w8vYatVX/UA=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                FpGVzek3BUE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000302
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                vlapBoKnEEE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                S6pQ8NtYFUE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000359
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                UpWkTZk4AUE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                1WTsikioBUE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000361
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                1ehUuVBf+EA=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                T1v1+uAgBEE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000383
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                IyujhNaU+EA=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                RWRlc8KS+0A=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000413
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                0Ftgmw9EBUE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                KX+13CZSB0E=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000431
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                XK+MsUKFFkE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                w4T7x/OWFUE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000482
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                JP6UfK5JB0E=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                kyoU/K7rD0E=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000510
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                8totxnl1/UA=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                5r3FJ7GEB0E=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000518
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                IVqTlKOUA0E=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                we+0VQ9sDEE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000527
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                a/VORo0AEkE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                em/xSZywEUE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000532
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                PkQYHbsREUE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                HeWvlgv7D0E=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000574
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                MJwA5f6H90A=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                Y1dEVjYVAkE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000591
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                O4cK29l3E0E=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                aSRH+cusDkE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000639
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                PisVwVJ5D0E=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                pyZjVwwEFUE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000641
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                8le0bbrkC0E=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                mfcWn0TdDUE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000728
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                +yiquR/y6UA=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                8Dtt1WsL/UA=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000730
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                eM59YNsIGkE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                UwyaBeYCF0E=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000767
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                3KrglXCo/UA=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                HvPe4pMx/UA=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000792
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                e8azDqm8BUE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                +e73Z/DuDkE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000859
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                3mIzPks78kA=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                AYcXJtyE+EA=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000915
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                MhfZ5WlNAkE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                sB3z3kIMAkE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000925
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                Wod81O/LDUE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                P5di0IwGF0E=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000944
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                L/EeIxBo+kA=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                UoWC38nK/kA=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000951
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                qFykcrPJAEE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                nS/Tz3UiEEE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000960
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                w2M81hLa9EA=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                e30gllQk8EA=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000979
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                kXSxKTJOG0E=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                bMe8t+jDHUE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000991
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                ng3/fPs2/EA=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                ZXOi7lb2BEE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF000998
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                roog6EJ1/EA=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                AQ4vTLiy+UA=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF001070
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                8svgIQr3CEE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                D7Zj3nurDkE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF001079
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                V0XVeq44/UA=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                ZGVzoo78AEE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF001126
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                p+x3CoRACUE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                fZl+LoXdC0E=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF001150
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                a795dQyDA0E=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                J+puatL5AEE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF001253
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                KvTUcXZVCUE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                2I55b4moEkE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF001269
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                k3r9zivOCUE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                kPNKj118F0E=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF001291
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                VNGcL7J1DUE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                TT+XYoh/E0E=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF001317
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                iQ1yoX8ZAEE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                vKnJ2JVK/0A=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF001438
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                /m4Iaojp/0A=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                pPzVcqt1AUE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF001442
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                4v20Kat+DUE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                rfNl+hnqCUE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF001453
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                5Vc3UBryCEE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                +rkUgwb2BUE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF001542
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                zoRs6RMwFUE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                QSypQtnZGEE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF001544
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                8bskfy1oEUE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                s8BonU9uF0E=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF001562
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                Ay3yy7SN4EA=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                Uv5quc2M60A=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF001563
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                syK7pPzFIUE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                B1QayTHBJUE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF001663
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                c7e1Sb8H90A=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                OlF3U/N1AkE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF001745
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                dNMLn5BJD0E=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                v9NWvb6pEUE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF001795
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                aQadNzPiA0E=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                ycrmRL08AUE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF001845
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                fbdlN1OuDEE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                q14fiAViDEE=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+    - - JF002515
+      - !!python/object/apply:collections.OrderedDict
+        - - - ds
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:pandas._libs.tslibs.timedeltas._timedelta_unpickle
+              - 39398400000000000
+              - 10
+              shift: !!python/object/apply:pandas._libs.tslibs.timestamps._unpickle_timestamp
+              - 1719792000000000000
+              - null
+              - null
+              - 10
+          - - y
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                t4EFUOkSDEE=
+              shift: !!python/object/apply:numpy.core.multiarray.scalar
+              - *id002
+              - !!binary |
+                lUZylN9uC0E=
+          - - adultos_mayores
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - discapacidad
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+          - - madres_trabajadoras
+            - !!python/object:neuralprophet.df_utils.ShiftScale
+              scale: 1.0
+              shift: 0.0
+  normalize: standardize
+  unknown_data_normalization: false
+config_regressors: !!python/object:neuralprophet.configure.ConfigFutureRegressors
+  d_hidden: 4
+  model: linear
+  num_hidden_layers: 2
+  regressors: null
+config_seasonality: !!python/object:neuralprophet.configure.ConfigSeasonality
+  computation: fourier
+  condition_name: null
+  daily_arg: false
+  daily_global_local: auto
+  global_local: global
+  mode: multiplicative
+  periods: !!python/object/apply:collections.OrderedDict
+  - - - yearly
+      - !!python/object:neuralprophet.configure.Season
+        arg: 52
+        condition_name: null
+        global_local: global
+        period: 365.25
+        resolution: 52
+    - - weekly
+      - !!python/object:neuralprophet.configure.Season
+        arg: true
+        condition_name: null
+        global_local: global
+        period: 7
+        resolution: 3
+  reg_lambda: 0.002
+  seasonality_local_reg: false
+  weekly_arg: true
+  weekly_global_local: auto
+  yearly_arg: 52
+  yearly_global_local: auto
+config_train: !!python/object:neuralprophet.configure.Train
+  batch_size: 64
+  epochs: 200
+  lambda_delay: 100
+  learning_rate: 0.0035
+  loss_func: !!python/object:torch.nn.modules.loss.SmoothL1Loss
+    _backward_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _backward_pre_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _buffers: {}
+    _forward_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _forward_hooks_always_called: !!python/object/apply:collections.OrderedDict
+    - []
+    _forward_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+    - []
+    _forward_pre_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _forward_pre_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+    - []
+    _is_full_backward_hook: null
+    _load_state_dict_post_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _load_state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _modules: {}
+    _non_persistent_buffers_set: !!set {}
+    _parameters: {}
+    _state_dict_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    _state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+    - []
+    beta: 0.3
+    reduction: none
+    training: true
+  loss_func_name: SmoothL1Loss
+  lr_finder_args: {}
+  n_data: 19900
+  newer_samples_start: 0.0
+  newer_samples_weight: 2
+  optimizer: !!python/name:torch.optim.adamw.AdamW ''
+  optimizer_args:
+    weight_decay: 0.001
+  quantiles:
+  - 0.5
+  reg_delay_pct: 0.5
+  reg_lambda_trend: null
+  scheduler: !!python/name:torch.optim.lr_scheduler.OneCycleLR ''
+  scheduler_args:
+    anneal_strategy: cos
+    div_factor: 10.0
+    final_div_factor: 10.0
+    pct_start: 0.3
+    three_phase: true
+  trend_reg_threshold: null
+config_trend: !!python/object:neuralprophet.configure.Trend
+  changepoints: null
+  changepoints_range: 0.9
+  growth: linear
+  n_changepoints: 6
+  trend_global_local: global
+  trend_local_reg: false
+  trend_reg: 0.008
+  trend_reg_threshold: null
+id_list:
+- JF000021
+- JF000482
+- JF001663
+- JF001070
+- JF000383
+- JF000767
+- JF001453
+- JF001795
+- JF000413
+- JF001442
+- JF001563
+- JF001317
+- JF000730
+- JF000944
+- JF000361
+- JF001150
+- JF000728
+- JF001544
+- JF000998
+- JF001269
+- JF000915
+- JF000925
+- JF000302
+- JF000287
+- JF000532
+- JF000518
+- JF000979
+- JF001745
+- JF000510
+- JF000951
+- JF000431
+- JF000960
+- JF000991
+- JF000639
+- JF000527
+- JF000359
+- JF000574
+- JF001291
+- JF000591
+- JF001438
+- JF000792
+- JF002515
+- JF001542
+- JF000641
+- JF001562
+- JF001079
+- JF001126
+- JF000859
+- JF001845
+- JF001253
+lagged_reg_layers: []
+max_lags: 30
+meta_used_in_model: false
+metrics:
+  MAE:
+  - MeanAbsoluteError
+  - {}
+  RMSE:
+  - MeanSquaredError
+  - squared: false
+n_forecasts: 30
+n_lags: 30
+num_seasonalities_modelled: 1
+num_seasonalities_modelled_dict: !!python/object/apply:collections.OrderedDict
+- - - yearly
+    - 1
+  - - weekly
+    - 1
+  - - daily
+    - 1
+num_trends_modelled: 1
