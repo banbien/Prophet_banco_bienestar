@@ -20,5 +20,3 @@ Preguntas:
 
 - ¿Es posible que un cajero pertenezca a un pre-cluster en un parket, pero en otro momento pertenezca a otro dado un nuevo parket?
   De ser así ¿Qué tan probable es?, ¿Qué tan grave es el efecto tiene sobre la inferencia? y ¿Cómo solventarlo?
-
-
