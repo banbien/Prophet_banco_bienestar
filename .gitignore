@@ -185,3 +185,4 @@ cython_debug/
 
 # Archivos de datos pesados
 *.parquet
+*.np*
